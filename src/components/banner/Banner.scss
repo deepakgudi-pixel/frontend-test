@@ -1,0 +1,138 @@
+@import "../../styles/variables";
+@import "../../styles/mediaQuery";
+
+.banner__container {
+  background-color: $secondary-color;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding-top: 30px;
+  padding-bottom: 90px;
+
+  .banner__layout {
+    display: flex;
+    margin-top: 78px;
+    justify-content: space-between;
+    width: 1110px;
+
+    @include breakpoint(1024) {
+      width: 800px;
+    }
+
+    @include breakpoint(768) {
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      margin-top: 20px;
+    }
+
+    .left__container {
+      overflow: hidden;
+      .title {
+        font-family: $primary-font;
+        text-transform: uppercase;
+        font-weight: 800;
+        font-size: 72px;
+        line-height: 86.4px;
+        color: $primary-color;
+        overflow: hidden;
+
+        @include breakpoint(1024) {
+          font-size: 42px;
+          line-height: 70px;
+        }
+
+        @include breakpoint(768) {
+          font-size: 32px;
+          line-height: 45px;
+          text-align: center;
+        }
+
+        span {
+          display: block;
+        }
+      }
+    }
+
+    .right__container {
+      @include breakpoint(768) {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin-top: 25px;
+      }
+
+      &--description {
+        font-family: $secondary-font;
+        width: 348px;
+        font-size: 21px;
+        line-height: 29.4px;
+        font-weight: 400;
+        color: $primary-color;
+        margin-top: 40px;
+        margin-bottom: 20px;
+
+        @include breakpoint(1024) {
+          font-size: 18px;
+        }
+
+        @include breakpoint(768) {
+          font-size: 14px;
+          text-align: center;
+          line-height: 21.4px;
+          margin-top: unset;
+          margin-bottom: 20px;
+        }
+      }
+
+      .btn__primary {
+        font-size: 20px;
+        font-family: $primary-font;
+        border: 1px solid $primary-color;
+        padding: 17px 30px;
+        border-radius: 100px;
+        display: inline-block;
+        text-transform: uppercase;
+        color: $primary-color;
+        transition: all 0.5s;
+        opacity: 0;
+
+        &:hover {
+          background-color: $default-color;
+          color: $primary-color;
+        }
+
+        @include breakpoint(1024) {
+          font-size: 14px;
+        }
+
+        @include breakpoint(768) {
+          font-size: 10px;
+          padding: 10px 12px;
+        }
+
+        span {
+          margin-right: 15px;
+        }
+
+        img {
+          width: 28px;
+          height: 18px;
+
+          @include breakpoint(1024) {
+            width: 22px;
+            height: 14px;
+          }
+
+          @include breakpoint(768) {
+            width: 14px;
+            height: 10px;
+          }
+        }
+      }
+    }
+  }
+}

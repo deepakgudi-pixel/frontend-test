@@ -1,0 +1,243 @@
+@import "../../../styles/variables";
+@import "../../../styles/mediaQuery";
+
+.section__six {
+  padding-top: 130px;
+  background: linear-gradient(to left bottom, #dbff00 50%, #444444 120%);
+  position: relative;
+
+  .model__rocket {
+    position: absolute;
+    width: 537.7px;
+    height: 537.7px;
+    transform: rotate(30deg) translateY(100px);
+    opacity: 0;
+    top: -162px;
+    right: 150px;
+    z-index: 100;
+    filter: drop-shadow(13px 10px 13px #424242);
+    overflow: hidden;
+
+    @include breakpoint(1200) {
+      width: 400px;
+      height: 400px;
+    }
+
+    @include breakpoint(1024) {
+      width: 300px;
+      height: 300px;
+    }
+
+    @include breakpoint(768) {
+      width: 250px;
+      height: 250px;
+    }
+
+    @include breakpoint(500) {
+      width: 180px;
+      height: 180px;
+      top: -40px;
+      right: 60px;
+    }
+
+    @include breakpoint(400) {
+      width: 150px;
+      height: 150px;
+      top: -40px;
+      right: 60px;
+    }
+
+    model-viewer {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      --progress-bar-color: transparent;
+    }
+  }
+
+  &---container {
+    padding-left: 165px;
+    margin-bottom: 173px;
+
+    @include breakpoint(1200) {
+      margin-bottom: 143px;
+    }
+
+    @include breakpoint(1024) {
+      padding-left: 70px;
+    }
+
+    @include breakpoint(768) {
+      padding-left: 50px;
+    }
+
+    @include breakpoint(500) {
+      padding-left: 40px;
+    }
+
+    h2 {
+      font-family: $primary-font;
+      font-size: 104px;
+      font-weight: 800;
+      line-height: 135.2px;
+      text-transform: uppercase;
+      overflow: hidden;
+
+      @include breakpoint(1200) {
+        font-size: 84px;
+        line-height: 100.2px;
+      }
+
+      @include breakpoint(1024) {
+        font-size: 64px;
+        line-height: 80px;
+      }
+
+      @include breakpoint(768) {
+        font-size: 45px;
+        line-height: 60px;
+      }
+
+      @include breakpoint(500) {
+        font-size: 34px;
+        line-height: 60px;
+      }
+
+      span {
+        display: block;
+        opacity: 0;
+        transform: translateY(80px);
+      }
+    }
+
+    .invest__cta {
+      font-family: $primary-font;
+      color: $primary-color;
+      text-transform: uppercase;
+      padding: 19.5px 50px;
+      border: 1px solid $primary-color;
+      border-radius: 100px;
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 24px;
+      transition: all 0.5s;
+      margin-top: 30px;
+      opacity: 0;
+      transform: translateY(40px);
+
+      @include breakpoint(1024) {
+        font-size: 22px;
+        padding: 17.5px 30px;
+      }
+
+      @include breakpoint(768) {
+        font-size: 16px;
+        padding: 14.5px 25px;
+      }
+
+      @include breakpoint(500) {
+        font-size: 14px;
+        padding: 10.5px 20px;
+      }
+
+      &:hover {
+        background-color: $default-color;
+      }
+
+      span:first-child {
+        margin-right: 20px;
+        @include breakpoint(768) {
+          margin-right: 15px;
+        }
+      }
+
+      span {
+        svg {
+          width: 37px;
+          height: 24px;
+
+          @include breakpoint(768) {
+            width: 30px;
+            height: 15px;
+          }
+
+          @include breakpoint(500) {
+            width: 20px;
+            height: 12px;
+          }
+        }
+      }
+    }
+  }
+
+  .footer {
+    padding: 48px 165px;
+    background-color: $primary-color;
+    color: $default-color;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    @include breakpoint(1024) {
+      flex-direction: column;
+    }
+
+    &--logo {
+      opacity: 0;
+      transform: translateY(40px);
+    }
+
+    &--links {
+      color: $default-color;
+      font-family: $primary-font;
+      font-size: 16px;
+      line-height: 24px;
+      display: flex;
+      align-items: center;
+      opacity: 0;
+      transform: translateY(40px);
+
+      @include breakpoint(1024) {
+        margin-top: 20px;
+        margin-bottom: 20px;
+      }
+
+      @include breakpoint(768) {
+        font-size: 14px;
+        flex-direction: column;
+      }
+
+      @include breakpoint(500) {
+        width: 150px;
+      }
+
+      li {
+        margin-right: 30px;
+
+        @include breakpoint(768) {
+          margin: unset;
+        }
+      }
+
+      li:nth-child(3) {
+        margin-right: unset;
+      }
+    }
+
+    .contact {
+      display: flex;
+      align-items: center;
+      opacity: 0;
+      transform: translateY(40px);
+
+      li {
+        margin-right: 10px;
+      }
+
+      li:nth-child(2) {
+        margin-right: unset;
+      }
+    }
+  }
+}

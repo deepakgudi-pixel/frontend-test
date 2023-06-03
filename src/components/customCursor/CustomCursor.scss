@@ -1,0 +1,18 @@
+@import "../../styles/mediaQuery";
+@import "../../styles/variables";
+
+.cursor {
+  background-color: $default-color;
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 99999;
+  mix-blend-mode: difference;
+
+  @include breakpoint(1024) {
+    display: none;
+  }
+}
